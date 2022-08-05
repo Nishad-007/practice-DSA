@@ -68,9 +68,9 @@ int main(){
     insertAtTail(head,3);
     display(head);
 
-    insertAtHead(head,1);
-    display(head);
+    // insertAtHead(head,1);
+    // display(head);
 
-    cout<<searching(head,2)<<endl;
+    // cout<<searching(head,2)<<endl;
 
 }

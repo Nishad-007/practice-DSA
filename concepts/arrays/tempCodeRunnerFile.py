@@ -1,2 +1,0 @@
-
-# Solvable Final configuration
