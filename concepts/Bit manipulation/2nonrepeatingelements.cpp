@@ -1,43 +1,48 @@
 #include <iostream>
+#include<vector>
 using namespace std;
  
 
-void get2NonRepeatingNos(int arr[], int n, int* x, int* y)
+vector<int> get2NonRepeatingNos(vector<int> &num)
 {
 
-    int Xor = arr[0];
-
+    vector<int> ans;
+    int Xor = num[0];
+    int n = num.size();
     int set_bit_no;
-    int i;
-    *x = 0;
-    *y = 0;
+    int x,y;
+    x=y=0;
 
-    for (i = 1; i < n; i++)
-        Xor ^= arr[i];
+    for (int i = 1; i < n; i++)
+        Xor ^= num[i];
  
     set_bit_no = Xor & ~(Xor - 1);
  
 
-    for (i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
  
 
-        if (arr[i] & set_bit_no)
-            *x = *x ^ arr[i];
+        if (num[i] & set_bit_no)
+            x = x ^ num[i];
 
         else {
-            *y = *y ^ arr[i];
+            y = y ^ num[i];
         }
     }
+    ans.push_back(x);
+    ans.push_back(y);
+    return ans;
 }
  
 
 int main()
 {
-    int arr[] = { 1,2,3,4,5,6,1,2,3,4,5,7};
-    int n = sizeof(arr) / sizeof(*arr);
-    int* x = new int[(sizeof(int))];
-    int* y = new int[(sizeof(int))];
-    get2NonRepeatingNos(arr, n, x, y);
-    cout << "The non-repeating elements are " << *x
-         << " and " << *y;
+    vector<int> num{ 1,2,3,4,5,6,1,2,3,4,5,7};
+
+    vector<int> p = get2NonRepeatingNos(num);
+    for(auto v:p){
+        cout<<v<<" ";
+    }
+    
+    // cout << "The non-repeating elements are " << x<< " and " << y;
 }

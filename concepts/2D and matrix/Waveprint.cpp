@@ -32,26 +32,25 @@ vector<int> wavePrint(vector<vector<int>> &arr, int nRows, int mCols){
 
 int main(){
 
-    vector<vector<int>> arr;
+    vector<vector<int>> arr{
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
 
-    for(int i =0;i<3;i++){
-        for (int j = 0; j < 4; j++)
-        {
-            cin>>arr[i][j];
-        }
+    // for(int i =0;i<3;i++){
+    //     for (int j = 0; j < 4; j++)
+    //     {
+    //         cin>>arr[i][j];
+    //     }
         
-    }
+    // };
 
-    for(int i=0;i<3;i++){
-        for (int j = 0; j < 4; j++)
-        {
-            cout<<arr[i][j]<<" ";
-        }
-        cout<<endl;
-        
-    }
+    vector<int> p = wavePrint(arr, 3, 3); 
 
-    wavePrint(arr, 3, 4);
+    for(int i=0;i<p.size();i++){
+       cout<<p[i]<<" ";
+    }cout<<endl;
 
 }
 
