@@ -6,13 +6,11 @@ void get2NonRepeatingNos(int arr[], int n, int* x, int* y)
 {
 
     int Xor = arr[0];
- 
 
     int set_bit_no;
     int i;
     *x = 0;
     *y = 0;
- 
 
     for (i = 1; i < n; i++)
         Xor ^= arr[i];
