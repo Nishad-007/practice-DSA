@@ -63,6 +63,14 @@ int main(){
 
 
     };
+
+    // for(int i =0;i<3;i++){
+    //     for (int j = 0; j < 4; j++)
+    //     {
+    //         cin>>matrix[i][j];
+    //     }
+        
+    // }
     vector<int> p=spiralOrder(matrix);
     
     for (int i = 0; i < p.size(); i++)
@@ -73,13 +81,7 @@ int main(){
 
     //input array
     // taking input rowise
-    // for(int i =0;i<3;i++){
-    //     for (int j = 0; j < 4; j++)
-    //     {
-    //         cin>>matrix[i][j];
-    //     }
-        
-    // }
+    // 
     
     // print the array
     // for(int i=0;i<3;i++){

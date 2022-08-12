@@ -3,36 +3,50 @@
 
 using namespace std;
 
-void solve(stack<int> &s, int x){
+// void solve(stack<int> &s, int x){
 
-    if(s.empty()){
-        s.push(x);
-        return;
+//     if(s.empty()){
+//         s.push(x);
+//         return;
+//     }
+
+//     int num = s.top();
+//     s.pop();
+
+//     solve(s, x);
+
+//     s.push(num);
+
+
+
+// }
+
+// stack<int> pushAtBottom(stack<int> &s, int x){
+//     solve(s,x);
+//     return s;
+// }
+
+
+void pushAtBottom(stack<int> &s,int t)
+{  
+    if(s.empty())
+        s.push(t); //If Stack empty,insert the element
+    else
+    {   int x = s.top();
+        s.pop(); //Popping all elements
+        pushAtBottom(s,t); //Inserting the given element
+        s.push(x);  //Pushing all the popped elements
     }
-
-    int num = s.top();
-    s.pop();
-
-    solve(s, x);
-
-    s.push(num);
-
 }
 
-stack<int> pushAtBottom(stack<int> &s, int x){
-    solve(s,x);
-    return s;
-}
+// void print(stack<int> &s){
+//     while (!s.empty())
+//     {
+//         cout<<s.top()<<" ";
+//         s.pop();
+//     }cout<<endl;
 
-void print(stack<int> &s){
-    while (!s.empty())
-    {
-        cout<<s.top()<<" ";
-        s.pop();
-    }
-}
-
-
+// }
 
 int main(){
 
@@ -41,11 +55,22 @@ int main(){
     s.push(2);
     s.push(3);
     s.push(4);
-    print(s);
+     
+    // print(s);
+    // while (!s.empty())
+    // {
+    //     cout<<s.top()<<" ";
+    //     s.pop();
+    // }cout<<endl;
    
     
     pushAtBottom(s,5);
-    print(s);
+    while (!s.empty())
+    {
+        cout<<s.top()<<" ";
+        s.pop();
+    }cout<<endl;
+    // print(s);
 
     return 0;
 

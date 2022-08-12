@@ -4,7 +4,7 @@ using namespace std;
 
 
 void solve(stack<int> &st, int count , int size){
-    if (count<size/2)
+    if (count==size/2)
     {
         st.pop();
         return;
@@ -17,7 +17,8 @@ void solve(stack<int> &st, int count , int size){
     st.push(num); 
 }
 
-void deleteMiddle(stack<int> &st, int count , int N){
+void deleteMiddle(stack<int> &st,  int N){
+    int count =0;
     solve(st, count , N);
 }
 
@@ -37,8 +38,11 @@ int main(){
     st.push(3);
     st.push(4);
     st.push(5);
-    printstack(st);
-    deleteMiddle(st, 0 , 5);
+    st.push(6);
+    st.push(7);
+    // printstack(st);
+    deleteMiddle(st, 5);
+    // solve(st, 0 , 5);
     printstack(st);
 
     

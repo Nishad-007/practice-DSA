@@ -30,11 +30,12 @@ void sortStack(stack<int> &stack){
 }
 
 void printStack(stack<int> &stack){
-    while (!stack.empty())
-    {
-        cout<<stack.top()<<" ";
-        stack.pop();
-    }
+//     while (!stack.empty())
+//     {
+//         cout<<stack.top()<<" ";
+//         stack.pop();
+//     }
+// }
 }
 
 int main(){
@@ -45,8 +46,13 @@ int main(){
     stack.push(6);
     stack.push(2);
     stack.push(4);
-    printStack(stack);
+//  
     sortStack(stack);
-    printStack(stack);
+    // printStack(stack);
+    while (!stack.empty())
+    {
+        cout<<stack.top()<<" ";
+        stack.pop();
+    }
 
 }

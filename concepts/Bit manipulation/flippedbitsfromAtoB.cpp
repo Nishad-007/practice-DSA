@@ -13,6 +13,7 @@ void flippedbits(int &a, int&b){
         int bit =XOR&1;
         if(bit){
             count++;
+            
         }
         XOR=XOR>>1;
     }

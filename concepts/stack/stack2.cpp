@@ -71,8 +71,8 @@ int main(){
     st.pop();
     st.pop();
     st.pop();
-    cout<<st.peek()<<endl;
-    
+    cout<<st.peek()<<endl;   
+    return 0;
     
 }
 

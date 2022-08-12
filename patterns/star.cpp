@@ -425,22 +425,24 @@ void pattern6(int &count){
 }
 
 void pattern7(int &count){ /// cant figure out
-   for (int row = 1; row < 2*count; row++)
+   for (int row = 1; row <=count; row++)
    {
-     if(row>count){
-        cout<<2*count-row<<endl;
-     }else{
-        cout<<row<<endl;
-     }
-       
      for(int column =1;column<=row;column++){
         cout<<"* ";
      }
-     cout<<endl;;
+     cout<<endl;
+   }
+   for (int row = count-1; row >=1; row--)
+   {
+     for(int column =1;column<=row;column++){
+        cout<<"* ";
+     }
+     cout<<endl;
    }
 
+
     // * 
-    // * *
+    // * * 
     // * * *
     // * * * * 
     // * * *
@@ -476,6 +478,28 @@ void pattern8(int &count){
 
 }
 
+void pattern18(int &count){
+
+   for (int row = 1; row <= count; row++)
+   {
+      for (int column = 1; column <= count-row; column++)
+      {
+         cout<<" ";
+      }
+      for (int  column = 1; column <= row; column++)
+      {
+         if(row == 1||row == count|| column == 1 || column == count || row == column){
+               cout<<"* ";
+         }else
+         {
+            cout<<" ";
+         }   
+      }
+      cout<<endl;
+      
+   }
+   
+}
 
 int main()
 {
@@ -489,7 +513,7 @@ int main()
     // pattern4(count);
     // pattern5(count);
     // pattern6(count);
-    // pattern7(count);
+   //  pattern7(count);
    //  pattern8(count);
    // pattern9(count);
    // pattern10(count);
@@ -500,7 +524,8 @@ int main()
    // pattern14(count);
    // pattern15(count);
    // pattern16(count);
-   pattern17(count);
+   // pattern17(count);
+   pattern18(count);
 
     return 0;
 }

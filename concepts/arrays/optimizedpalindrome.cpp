@@ -8,7 +8,7 @@ char tolowercase(char ch){
         return ch;
     }
     else{
-        char temp = ch-'A'+'a';
+        char temp = ch+32;
         return temp;
     }
 

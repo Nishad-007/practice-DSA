@@ -37,7 +37,7 @@ vector<int> get2NonRepeatingNos(vector<int> &num)
 
 int main()
 {
-    vector<int> num{ 1,2,3,4,5,6,1,2,3,4,5,7};
+    vector<int> num{ 9,8,5,4,12,13,4,5,8,9};
 
     vector<int> p = get2NonRepeatingNos(num);
     for(auto v:p){

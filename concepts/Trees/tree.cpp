@@ -25,6 +25,13 @@ struct Node
      4   5 6   7
 */
 
+// Inorder => Left, Root, Right.
+
+// Preorder => Root, Left, Right.
+
+// Post order => Left, Right, Root.
+
+
 // PRE-ORDER traversal
 void preorder( Node *root)
 {
