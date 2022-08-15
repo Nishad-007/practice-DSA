@@ -6,7 +6,7 @@ void count(int n ){
 
     // tail recursion
     // cout<<n<<endl;
-
+ 
     count(n-1);
 
     //head recursion
