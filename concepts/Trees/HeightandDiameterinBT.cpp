@@ -51,6 +51,24 @@ int calcDiameter(Node* root){
 
 }
 
+// the above solution takes O(n^2) time.
+// the following solution takes O(n) time. this is because the solution takes height and diameter calculation in one function.
+
+int calcDiameter(Node* root, int &height){
+    if(root ==NULL) return 0;
+
+    int lh =0 ; int rh = 0 ;
+
+    int lDiameter = calcDiameter(root->left, lh);
+    int rDiameter = calcDiameter(root->right, rh);
+
+    int currDiameter = lh + rh+ 1;
+    height = max(lh,rh) +1;
+
+    return max(currDiameter, max(lDiameter,rDiameter));
+
+}
+
 int main(){
     Node* root = new Node(1);
     root->left = new Node(2);
@@ -63,6 +81,8 @@ int main(){
     // cout << CountNodes(root);
     // cout<<calcHeight(root);//prints 3
     cout<<calcDiameter(root)<<"\n";
+    int height = 0;
+    cout <<calcDiameter(root,height)<<"\n";
 
     return 0;
 }
