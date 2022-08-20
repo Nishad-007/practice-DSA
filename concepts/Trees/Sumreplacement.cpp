@@ -47,6 +47,8 @@ void preorder(Node* root){
     
 }
 
+// the time complexity of the function is O(n);
+
 int main(){
     Node* root = new Node(1);
     root->left = new Node(2);
