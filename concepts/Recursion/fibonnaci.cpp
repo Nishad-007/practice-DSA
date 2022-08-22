@@ -4,8 +4,7 @@ using namespace std;
 
 int fibonnaci(int i ){
 
-    if( i==0 ) return 0;
-    if( i==1 ) return 1;
+    if( i==0 || i==1) return i;
 
    
     return  (fibonnaci(i-1) + fibonnaci(i-2));
@@ -14,7 +13,7 @@ int fibonnaci(int i ){
 int main(){
 
     int x , i=0;
-   cout << "Enter the number of terms of series : ";
+   cout << "number: ";
    cin >> x;
    cout << "\nFibonnaci Series : ";
    while(i < x) {
