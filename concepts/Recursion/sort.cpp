@@ -21,3 +21,5 @@ int main() {
 	return 0;
 }
 
+//to see if the array is sorted or not
+
