@@ -34,29 +34,7 @@ void insertatail(node* &head,int val){
 }
 
 
-void makecycle(node* &head, int pos){
 
-    node* temp = head;
-    node* startnode;
-
-    int count=1;
-
-    if (head == NULL)
-    {
-        return;
-    }
-
-    while (temp->next!= NULL)
-    {
-        if(count == pos){
-            startnode = temp;
-        }
-        temp = temp->next;
-        count++;
-    }
-    temp->next = startnode;
- 
-}
 
 bool detectcycle(node* &head){
     node* slow = head;
